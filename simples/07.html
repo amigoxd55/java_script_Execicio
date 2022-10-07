@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="container">
+        <p>
+            7) A equipe Benneton-Ford deseja calcular o número mínimo de litros que deverá colocar no tanque de
+            seu carro para que ele possa percorrer um determinado número de voltas até o primeiro
+            reabastecimento. Escreva um programa que leia o comprimento da pista (em metros), o número total de
+            voltas a serem percorridas no grande prêmio, o número de abastecimentos desejados e o consumo de
+            combustível do carro (em Km/L). Calcular e escrever o número mínimo de litros necessários para
+            percorrer até o primeiro reabastecimento. OBS: Considere que o número de voltas entre os
+            abastecimentos é o mesmo.
+
+    </section>
+
+    </p>
+    <form action="">
+
+        <div class="form-groups">
+
+            <label for="comprimento">Comprimento da pista(metros?)</label>
+            <input type="text" name="comprimento" id="comprimento" value="0" class="form-control">
+        </div>
+
+        <div class="form-groups">
+
+            <label for="numeto_volta">numeto de voltas? (metros)</label>
+            <input type="text" name="numeto_volta" id="numeto_volta" value="0" class="form-control">
+        </div>
+        <div class="form-groups">
+
+            <label for="abastecimento">Número de abastecimento?</label>
+            <input type="text" name="abastecimento" id="abastecimento" value="0" class="form-control">
+        </div>
+        <div class="form-groups">
+
+            <label for="comsumo">Consumo do combustível do carro (emKM/L)?</label>
+            <input type="text" name="comsumo" id="comsumo" value="0" class="form-control">
+        </div>
+        <div class="form-groups">
+            <button type="button" class="btnn btn-outline-primary"
+                onclick="controllerCalculoAbastecimento()">Calcular</button>
+        </div>
+    </form>
+    <span id="saidaTexto"></span>
+
+</body>
+
+<script>
+    function controllerCalculoAbastecimento() {
+        var comprimento = document.getElementById("comprimento").value;
+        var numeto_volta = document.getElementById("numero_volta").value;
+        var abastecimento = document.getElementById("abastecimento").value;
+        var consume = document.getElementById("consume").value;
+
+        var resposta_calculo = calculoAbastecimento(comprimento, numeto_volta, abastecimento, consume);
+        saidaDados("Qauntidade de litros minima" + resposta_calculo);
+    }
+    function calculoAbastecimento(comprimento, numero_volta, abastecimento, consumo) {
+        var comprimento_km = (comprimento / 1000) * numero_volta;
+
+        var total_litros = total_comprimento_km / consumo;
+
+        var quantidade_litros = toral_litros / abastecimento;
+
+        return quantidade_litros
+    }
+
+    function saidaDados(texto_saida) {
+        document.getElementById("saidaTexto").innerHTML = texto_saida;
+
+
+    }
+
+</script>
+
+</html>
